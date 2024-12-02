@@ -14,3 +14,9 @@ class TiendaViewset(viewsets.ModelViewSet):
 class PersonaViewset(viewsets.ModelViewSet):
     queryset=Persona.objects.all()
     serializer_class=PersonaSerializer
+
+class TotalIngeViewset(viewsets.ModelViewSet):
+    queryset=Persona.objects.filter(pk=1)
+    serializer_class=PersonaSerializer
+    
+        

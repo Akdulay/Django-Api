@@ -10,10 +10,18 @@ class Productos(models.Model):
     canMin=models.IntegerField()
     precio=models.DecimalField(max_digits=5, decimal_places=2)
 
+    def __str__(self):
+        return self.name
+
 
 class Tienda(models.Model):
     name=models.CharField(max_length=20)
     descripcion=models.TextField()
+
+
+    def __str__(self):
+        return self.name 
+    
 
 
 
@@ -21,7 +29,10 @@ class Persona(models.Model):
     name=models.CharField(max_length=20)
     ocupacion=models.CharField(max_length=100)
     descripcion_ocupa=models.TextField()
-    tienda=models.ForeignKey(Tienda,on_delete=models.CASCADE)    
+    tienda=models.ForeignKey(Tienda,on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.name    
 
 
         
