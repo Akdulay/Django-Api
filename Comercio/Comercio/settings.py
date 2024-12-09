@@ -139,7 +139,6 @@ REST_FRAMEWORK = {
     
 }
 
-
 SPECTACULAR_SETTINGS = {
     'TITLE': 'Primera Api Comercio',
     'DESCRIPTION': 'Your project description',

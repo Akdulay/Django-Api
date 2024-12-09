@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from Inventario.models import Productos,Tienda,Persona
+from Inventario.models import Productos,Tienda,Persona,Cargo
 
 class ProductosSerializer(serializers.ModelSerializer):
     class Meta:
@@ -14,4 +14,9 @@ class TiendaSerializer(serializers.ModelSerializer):
 class PersonaSerializer(serializers.ModelSerializer):
     class Meta:
         model=Persona
+        fields='__all__'
+
+class CargoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Cargo
         fields='__all__'

@@ -23,6 +23,12 @@ class Tienda(models.Model):
         return self.name 
     
 
+class Cargo(models.Model):
+    nombre = models.CharField(max_length=100, unique=True)
+    descripcion = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.nombre
 
 
 class Persona(models.Model):
@@ -30,6 +36,7 @@ class Persona(models.Model):
     ocupacion=models.CharField(max_length=100)
     descripcion_ocupa=models.TextField()
     tienda=models.ForeignKey(Tienda,on_delete=models.CASCADE)
+    cargo=models.OneToOneField(Cargo,on_delete=models.SET_NULL,blank=True, null=True)
     
     def __str__(self):
         return self.name    
