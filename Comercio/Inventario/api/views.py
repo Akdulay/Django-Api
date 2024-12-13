@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from Inventario.models import Productos,Tienda,Persona,Cargo
-from Inventario.api.serializer import ProductosSerializer,TiendaSerializer,PersonaSerializer,CargoSerializer
+from Inventario.models import *
+from Inventario.api.serializer import *
 
 
 class ProductosViewSet(viewsets.ModelViewSet):

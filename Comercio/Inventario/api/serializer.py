@@ -3,8 +3,8 @@ from Inventario.models import Productos,Tienda,Persona,Cargo
 
 class ProductosSerializer(serializers.ModelSerializer):
     class Meta:
-        model=Productos 
-        fields='__all__'
+        model = Productos 
+        fields = ['name', 'descripcion', 'marca', 'canMaxima', 'canMin', 'precio']   
 
 class TiendaSerializer(serializers.ModelSerializer):
     class Meta:
